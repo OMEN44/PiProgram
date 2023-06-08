@@ -4,6 +4,8 @@ This language is designed to be a Java like language for RaspberryPi that compil
 
 (if it works lol)
 
+.pip
+
 # Contents
 
 - [Syntax](#syntax)
@@ -103,6 +105,36 @@ This function takes two integer paramaters and returns the output of their sum.
 ## Basic Operations
 
 All operations should work as expected. Bro if you dont know how pls go learn cause I don't wanna explain this...
+
+## Loops
+
+### For loop
+
+```
+for () {
+    print();
+}
+```
+
+### While loop
+
+```
+while (<condition>) {
+    print();
+}
+```
+
+## If statements
+
+```
+if (<condition>) {
+    print();
+} else if (<condition>) {
+    print();
+} else {
+    print();
+}
+```
 
 ## Classes
 

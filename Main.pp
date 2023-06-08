@@ -1,3 +1,0 @@
-import Standard;
-
-print("Hello!");

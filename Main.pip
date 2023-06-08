@@ -1,0 +1,7 @@
+import Standard;
+
+print("Hello!"); /* Test Comment */
+// Test
+
+const test = 5;
+var test = test;
