@@ -1,52 +1,68 @@
-
 # p++
+
 This language is designed to be a Java like language for RaspberryPi that compiles to c++. The goal is to make development of RaspberryPi languages much easier and entuative for anyone from beginners to experts.
 
 (if it works lol)
 
 # Contents
- - [Syntax](#syntax)
-    - [Comments](#comments)
-    - [Types](#types)
-    - [Functions](#functions)
-    - [Basic operations](#basic-operations)
-    - [Classes](#classes)
- - [Built in functions](#built-in-functions)
- - [Code examples]
- - [To do list]
+
+- [Syntax](#syntax)
+  - [Comments](#comments)
+  - [Types](#types)
+  - [Functions](#functions)
+  - [Basic operations](#basic-operations)
+  - [Classes](#classes)
+- [Built in functions](#built-in-functions)
+- [Code examples]
+- [Compiler](#compiler)
+- [To do list]
 
 # Syntax
+
 ## Comments
+
 First off lets start with comments so we can add helpful notes in later code snippets
 
 ### Inline:
+
 ```
 // I am a comment
 ```
 
 ### Multiline:
+
 ```
-/* 
+/*
 I am a comment
 I am the second line!
 */
 ```
+
 ## Types
+
 p++ has three primative data types.
+
 ### Primitive Types
+
 ```
-int 
+int
 decimal
 char
 ```
+
 These types are combined to create more complex types such as:
+
 ### Compound Types
+
 ```
 Array
 String
 ```
+
 To fine one of these types use this syntax:
+
 ### Variables
+
 ```
 // constants once defined can never be changed
 const CONSTANT_VAR:String = "Test"
@@ -60,11 +76,13 @@ CONST_VAR = "Test 2" // Throws error
 ```
 
 ## Functions
+
 ```
 def functionName(param:TYPE):TYPE
-^   ^             ^     ^     ^  
+^   ^             ^     ^     ^
 1   2             3     4     5
 ```
+
 1. Declare a function with the keyword "def"
 2. Think of a name. Use camel case for these!
 3. Write the name of your paramaters, add as many of these as you need
@@ -72,27 +90,32 @@ def functionName(param:TYPE):TYPE
 5. Append another colon followed by a data type to set the return type. If this is not set the compiler will assume void.
 
 ### Example
+
 ```
 def addNumbers(a:int, b:int):int {
     var sum:int = a + b;
     return sum;
 }
 ```
+
 This function takes two integer paramaters and returns the output of their sum.
 
 ## Basic Operations
+
 All operations should work as expected. Bro if you dont know how pls go learn cause I don't wanna explain this...
 
 ## Classes
+
 ### class Definition
+
 ```
 //Define class signiture:
 class ClassName {
     // define class varaibles and stuff
     const CONSTANT_VAR:[TYPE] = [VALUE];
 
-    /* 
-    This is the contructor and 
+    /*
+    This is the contructor and
     will be run once on class creation
     */
     init() {
@@ -130,32 +153,32 @@ testClass.age();
 ```
 
 # Built in functions
+
 ## RaspberryPi
 
+p++ will have directly integrated libraries with functions for gpio etc..
+
+Both Pico And PI?? Different libriraries for each??
+
 ## Dev/Debugging
+
 Execute c++ code directly. AVOID USE OF THIS.
+
 ```
 exec("/*Valid c++ code*/")
 ```
 
 Calls the .toString() method if the data type is not primative.
+
 ```
 print(/*Takes any data type*/)
 ```
 
+## Other stuff
 
-
-l
-l
-
-l
-
-l
-
-l
 ```js
-let name = "Jeff"
-console.log(`Hello my name is ${name}`)
+let name = "Jeff";
+console.log(`Hello my name is ${name}`);
 ```
 
 ```c++
@@ -167,4 +190,30 @@ int main() {
     return 1;
 }
 
+```
+
+# Compiler
+
+## Usage
+
+### Building
+
+To build the file run the follwing command
+
+```
+builder build <file>
+```
+
+Running build without a file will build all files with the p++ file extension in the current directory.
+
+```
+builder build
+```
+
+### Running
+
+To run the file run the follwing command. This will build and run the file.
+
+```
+builder run <file>
 ```
