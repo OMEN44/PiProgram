@@ -14,7 +14,20 @@ This language is designed to be a Java like language for RaspberryPi that compil
   - [Functions](#functions)
   - [Basic operations](#basic-operations)
   - [Classes](#classes)
+  - [Loops](#loops)
+  - [If & Else](#if--else)
 - [Built in functions](#built-in-functions)
+  - [Math](#math)
+    - [Random](#random)
+    - [Round](#round)
+    - [Floor](#floor)
+    - [Square](#square)
+    - [Square Root](#square-root)
+  - [Console](#console)
+    - [Print](#print)
+    - [Read](#read)
+  - [RaspberryPi](#raspberrypi)
+  - [Dev/Debugging](#devdebugging)
 - [Code examples]
 - [Compiler](#compiler)
 - [To do list]
@@ -124,7 +137,7 @@ while (<condition>) {
 }
 ```
 
-## If statements
+## If & Else
 
 ```
 if (<condition>) {
@@ -186,6 +199,66 @@ testClass.age();
 
 # Built in functions
 
+## Math
+
+### Random
+
+```
+random(min, max)
+```
+
+Returns a random number between min and max
+
+### Round
+
+```
+round(number)
+```
+
+Rounds a number to the nearest integer
+
+### Floor
+
+```
+floor(number)
+```
+
+Rounds a number down to the nearest integer
+
+### Square
+
+```
+sqr(number)
+```
+
+Returns the square of a number
+
+### Square Root
+
+```
+sqrt(number)
+```
+
+Returns the square root of a number
+
+## Console
+
+### Print
+
+Calls the .toString() method if the data type is not primative.
+
+```
+print(/*Takes any data type*/)
+```
+
+### Read
+
+```
+read()
+```
+
+returns a string of the user input
+
 ## RaspberryPi
 
 p++ will have directly integrated libraries with functions for gpio etc..
@@ -198,12 +271,6 @@ Execute c++ code directly. AVOID USE OF THIS.
 
 ```
 exec("/*Valid c++ code*/")
-```
-
-Calls the .toString() method if the data type is not primative.
-
-```
-print(/*Takes any data type*/)
 ```
 
 ## Other stuff

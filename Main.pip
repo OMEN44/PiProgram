@@ -4,4 +4,14 @@ print("Hello!"); /* Test Comment */
 // Test
 
 const test = 5;
-var test = test;
+var test = "test";
+
+class Test {
+    init () {
+
+    }
+}
+
+def functionTest () {
+    return "5"
+}
