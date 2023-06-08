@@ -11,6 +11,12 @@ This language is designed to be a Java like language for RaspberryPi that compil
 - [Syntax](#syntax)
   - [Comments](#comments)
   - [Types](#types)
+    - [Primitive Types](#primitive-types)
+    - [Compound Types](#compound-types)
+      - [String](#string)
+      - [Array](#array)
+      - [Number](#number)
+  - [Variables](#variables)
   - [Functions](#functions)
   - [Basic operations](#basic-operations)
   - [Classes](#classes)
@@ -63,6 +69,7 @@ p++ has three primative data types.
 int
 decimal
 char
+bool
 ```
 
 These types are combined to create more complex types such as:
@@ -70,11 +77,36 @@ These types are combined to create more complex types such as:
 ### Compound Types
 
 ```
-Array
 String
+Array
+Number
 ```
 
 To fine one of these types use this syntax:
+
+#### String
+
+```
+var exampleString:String = "Test"
+```
+
+A string is a group of characters.
+
+#### Array
+
+An array is a list of values. These values can be any data type.
+
+```
+var exampleArray:Array<String> = ["Test", "Test", "Test"];// This is an array of strings
+```
+
+#### Number
+
+A number is a value that can be either an int or a decimal. It is mostly used in mathmatical operations where the type is not important.
+
+```
+var exampleNumber:Number = 15;
+```
 
 ### Variables
 
@@ -212,7 +244,7 @@ Returns a random number between min and max
 ### Round
 
 ```
-round(number)
+round(<number>)
 ```
 
 Rounds a number to the nearest integer
@@ -220,7 +252,7 @@ Rounds a number to the nearest integer
 ### Floor
 
 ```
-floor(number)
+floor(<number>)
 ```
 
 Rounds a number down to the nearest integer
@@ -228,7 +260,7 @@ Rounds a number down to the nearest integer
 ### Square
 
 ```
-sqr(number)
+sqr(<number>)
 ```
 
 Returns the square of a number
@@ -236,10 +268,20 @@ Returns the square of a number
 ### Square Root
 
 ```
-sqrt(number)
+sqrt(<number>)
 ```
 
 Returns the square root of a number
+
+### Trigonometry
+
+```
+sin(<number>)
+cos(<number>)
+tan(<number>)
+```
+
+Returns the sin, cos or tan of a number in radians
 
 ## Console
 
