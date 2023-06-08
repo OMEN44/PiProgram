@@ -1,0 +1,3 @@
+import Standard;
+
+print("Hello!");
