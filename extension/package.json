@@ -1,0 +1,34 @@
+{
+  "name": "p--",
+  "displayName": "P++",
+  "description": "Language Support For P++",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "p++",
+        "aliases": [
+          "p++",
+          "p++"
+        ],
+        "extensions": [
+          ".pip"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "p++",
+        "scopeName": "source.pip",
+        "path": "./syntaxes/p++.tmLanguage.json"
+      }
+    ]
+  }
+}

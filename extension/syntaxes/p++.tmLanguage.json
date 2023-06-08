@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "p++",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "integer"
+    },
+    { "include": "#comments" },
+    { "include": "#variables" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.p++",
+          "match": "\\b(if|while|for|return)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.p++",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.p++",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "integer": {
+      "name": "constant.numeric.p++",
+      "match": "\\b(\\d+)\\b"
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.p++",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.p++",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.constant.p++",
+          "match": "\\b(const)\\b"
+        },
+        {
+          "name": "variable.other.p++",
+          "match": "\\b(var)\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.pip"
+}
