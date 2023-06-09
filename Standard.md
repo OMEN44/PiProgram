@@ -342,7 +342,7 @@ int main() {
 To build the file run the follwing command
 
 ```
-builder build <file>
+p++ -o <output file> -a <run|compile|translate> [list files to compile] 
 ```
 
 Running build without a file will build all files with the p++ file extension in the current directory.
